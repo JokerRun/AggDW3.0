@@ -1,0 +1,6 @@
+#!/bin/bash
+ssh node1 "systemctl stop ntpd; \
+    ntpdate ntp1.aliyun.com; \
+    systemctl start ntpd; \
+    xcall ntpdate node1; \
+    xcall timedatectl status"

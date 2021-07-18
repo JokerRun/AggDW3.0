@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for host in node1.hdp node2.hdp node3.hdp
+do
+  echo ====================  $host  ====================
+  if [ -e ~/.ssh/id_rsa.pub ]
+    then
+        ssh-copy-id $host     
+    else
+        ssh-keygen -t rsa
+        ssh-copy-id $host     
+    fi
+  done
+
+done

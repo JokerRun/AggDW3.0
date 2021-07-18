@@ -1,0 +1,33 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+# hadoop
+
+# hadoop
+# 桥接地址
+192.168.101.101 node1
+192.168.101.102 node2
+192.168.101.103 node3
+192.168.101.104 node4
+192.168.101.101 node1.hdp
+192.168.101.102 node2.hdp
+192.168.101.103 node3.hdp
+192.168.101.104 node4.hdp
+
+# host-only 地址 
+# mac ifconfig可以查看宿主机ip(如果没看到的话，重新激活一下vboxnet0网卡)
+192.168.99.103 node1
+192.168.99.104 node2
+192.168.99.105 node3
+192.168.99.106 node4
+192.168.99.103 node1.hdp
+192.168.99.104 node2.hdp
+192.168.99.105 node3.hdp
+192.168.99.106 node4.hdp
+
+# 桥接网卡2
+192.168.101.6 node1
+192.168.101.8 node2
+192.168.101.9 node3
+192.168.101.6 node1.hdp
+192.168.101.8 node2.hdp
+192.168.101.9 node3.hdp

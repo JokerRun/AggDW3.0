@@ -1,0 +1,1993 @@
+{
+  "RootName": "DataModels",
+  "CTVER": "43543234",
+  "TableCount": 24,
+  "Count": 1,
+  "items": [{
+    "ID": 9,
+    "Name": "gmall",
+    "CreateDate": "3-5-21 21:43:46",
+    "OrderNo": 1,
+    "DefDbEngine": "MYSQL",
+    "DbConnectStr": "TCtMetaMysqlDb",
+    "ConfigStr": "DrawerWidth=2762\nDrawerHeight=884\nWorkAreaColor=16777215\nSelectedColor=-2147483635\nDefaultObjectColor=15921906\nDefaultTitleColor=255\nDefaultPKColor=16711935\nDefaultFKColor=16711680\nDefaultBorderColor=12632256\nDefaultLineColor=16711680\nShowFieldType=1\nShowFieldIcon=1\nShowPhyFieldName=2\nDatabaseEngine=\nGenFKIndexesSQL=0\nIndependPosForOverviewMode=1\n",
+    "Tables": {
+      "Count": 24,
+      "items": [
+        {
+          "Name": "activity_info",
+          "Memo": "活动表",
+          "OrderNo": 1,
+          "GraphDesc": "Left=10.00\r\nTop=360.00",
+          "MetaFields": {
+            "Count": 7,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "活动id",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "activity_name",
+                "Memo": "活动名称",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 3,
+                "Name": "activity_type",
+                "Memo": "活动类型",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 4,
+                "Name": "activity_desc",
+                "Memo": "活动描述",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 4,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 2000
+              },
+              {
+                "ID": 5,
+                "Name": "start_time",
+                "Memo": "开始时间",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 5,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "end_time",
+                "Memo": "结束时间",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 6,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 7,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "activity_order",
+          "Memo": "活动与订单关联表",
+          "OrderNo": 2,
+          "GraphDesc": "Left=280.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 4,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "activity_id",
+                "Memo": "活动id ",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "order_id",
+                "Memo": "订单编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "create_time",
+                "Memo": "发生日期",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 4,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "activity_rule",
+          "Memo": "优惠规则",
+          "OrderNo": 3,
+          "GraphDesc": "Left=10.00\r\nTop=210.00",
+          "MetaFields": {
+            "Count": 7,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1
+              },
+              {
+                "ID": 2,
+                "Name": "activity_id",
+                "Memo": "类型",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "condition_amount",
+                "Memo": "满减金额",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 3,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 4,
+                "Name": "condition_num",
+                "Memo": "满减件数",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "benefit_amount",
+                "Memo": "优惠金额",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 5,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 6,
+                "Name": "benefit_discount",
+                "Memo": "优惠折扣",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 6,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "benefit_level",
+                "Memo": "优惠级别",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 7,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "activity_sku",
+          "Memo": "活动参与商品",
+          "OrderNo": 4,
+          "GraphDesc": "Left=775.00\r\nTop=210.00",
+          "MetaFields": {
+            "Count": 4,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "activity_id",
+                "Memo": "活动id ",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "sku_id",
+                "Memo": "sku_id",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 4,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_category1",
+          "Memo": "一级分类表",
+          "OrderNo": 5,
+          "GraphDesc": "Left=1270.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 2,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "name",
+                "Memo": "分类名称",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 1,
+                "DataLength": 10
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_category2",
+          "Memo": "二级分类表",
+          "OrderNo": 6,
+          "GraphDesc": "Left=752.50\r\nTop=110.00",
+          "MetaFields": {
+            "Count": 3,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "name",
+                "Memo": "二级分类名称",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 2,
+                "DataType": 1,
+                "DataLength": 200
+              },
+              {
+                "ID": 3,
+                "Name": "category1_id",
+                "Memo": "一级分类编号",
+                "CreateDate": "3-5-21 21:47:08",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_category3",
+          "Memo": "三级分类表",
+          "OrderNo": 7,
+          "GraphDesc": "Left=752.50\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 3,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "name",
+                "Memo": "三级分类名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "DataLength": 200
+              },
+              {
+                "ID": 3,
+                "Name": "category2_id",
+                "Memo": "二级分类编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_dic",
+          "Memo": "编码字典表",
+          "OrderNo": 8,
+          "GraphDesc": "Left=1945.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "dic_code",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 1,
+                "KeyFieldType": 1,
+                "DataLength": 10
+              },
+              {
+                "ID": 2,
+                "Name": "dic_name",
+                "Memo": "编码名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 3,
+                "Name": "parent_code",
+                "Memo": "父编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 4,
+                "Name": "create_time",
+                "Memo": "创建日期",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "operate_time",
+                "Memo": "修改日期",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_province",
+          "OrderNo": 9,
+          "GraphDesc": "Left=550.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 2,
+                "Name": "name",
+                "Memo": "省名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 3,
+                "Name": "region_id",
+                "Memo": "大区id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 4,
+                "Name": "area_code",
+                "Memo": "行政区位码",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 5,
+                "Name": "iso_code",
+                "Memo": "国际编码",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_region",
+          "OrderNo": 10,
+          "GraphDesc": "Left=1270.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 2,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "大区id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 2,
+                "Name": "region_name",
+                "Memo": "大区名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              }
+            ]
+          }
+        },
+        {
+          "Name": "base_trademark",
+          "OrderNo": 11,
+          "GraphDesc": "Left=2417.50\r\nTop=160.00",
+          "MetaFields": {
+            "Count": 2,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "tm_id",
+                "Memo": "品牌id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 2,
+                "Name": "tm_name",
+                "Memo": "品牌名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              }
+            ]
+          }
+        },
+        {
+          "Name": "cart_info",
+          "Memo": "购物车表 用户登录系统时更新冗余",
+          "OrderNo": 12,
+          "GraphDesc": "Left=1720.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 13,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "user_id",
+                "Memo": "用户id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "sku_id",
+                "Memo": "skuid",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "cart_price",
+                "Memo": "放入购物车时价格",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 10,
+                "DataScale": 2
+              },
+              {
+                "ID": 5,
+                "Name": "sku_num",
+                "Memo": "数量",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "img_url",
+                "Memo": "图片文件",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 7,
+                "Name": "sku_name",
+                "Memo": "sku名称 (冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 8,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "operate_time",
+                "Memo": "修改时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 10,
+                "Name": "is_ordered",
+                "Memo": "是否已经下单",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 11,
+                "Name": "order_time",
+                "Memo": "下单时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 11,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "source_type",
+                "Memo": "来源类型",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 12,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 13,
+                "Name": "source_id",
+                "Memo": "来源编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 13,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "comment_info",
+          "Memo": "商品评论表",
+          "OrderNo": 13,
+          "GraphDesc": "Left=550.00\r\nTop=210.00",
+          "MetaFields": {
+            "Count": 9,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "user_id",
+                "Memo": "用户名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "sku_id",
+                "Memo": "skuid",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "spu_id",
+                "Memo": "商品id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "order_id",
+                "Memo": "订单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "appraise",
+                "Memo": "评价 1 好评 2 中评 3 差评",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 7,
+                "Name": "comment_txt",
+                "Memo": "评价内容",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 2000
+              },
+              {
+                "ID": 8,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "operate_time",
+                "Memo": "修改时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "coupon_info",
+          "Memo": "优惠券表",
+          "OrderNo": 14,
+          "GraphDesc": "Left=280.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 16,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "购物券编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "coupon_name",
+                "Memo": "购物券名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 3,
+                "Name": "coupon_type",
+                "Memo": "购物券类型 1 现金券 2 折扣券 3 满减券 4 满件打折券",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 4,
+                "Name": "condition_amount",
+                "Memo": "满额数",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 10,
+                "DataScale": 2
+              },
+              {
+                "ID": 5,
+                "Name": "condition_num",
+                "Memo": "满件数",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 6,
+                "Name": "activity_id",
+                "Memo": "活动编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "benefit_amount",
+                "Memo": "减金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 8,
+                "Name": "benefit_discount",
+                "Memo": "折扣",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 10,
+                "Name": "range_type",
+                "Memo": "范围类型 1、商品 2、品类 3、品牌",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 11,
+                "Name": "spu_id",
+                "Memo": "商品id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 11,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "tm_id",
+                "Memo": "品牌id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 12,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "category3_id",
+                "Memo": "品类id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 13,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 14,
+                "Name": "limit_num",
+                "Memo": "最多领用次数",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 14,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 15,
+                "Name": "operate_time",
+                "Memo": "修改时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 15,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 16,
+                "Name": "expire_time",
+                "Memo": "过期时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 16,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "coupon_use",
+          "Memo": "优惠券领用表",
+          "OrderNo": 15,
+          "GraphDesc": "Left=1495.00\r\nTop=210.00",
+          "MetaFields": {
+            "Count": 9,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "coupon_id",
+                "Memo": "购物券ID",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "user_id",
+                "Memo": "用户ID",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "order_id",
+                "Memo": "订单ID",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "coupon_status",
+                "Memo": "购物券状态",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 6,
+                "Name": "get_time",
+                "Memo": "领券时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "using_time",
+                "Memo": "使用时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "used_time",
+                "Memo": "支付时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "expire_time",
+                "Memo": "过期时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "favor_info",
+          "Memo": "商品收藏表",
+          "OrderNo": 16,
+          "GraphDesc": "Left=775.00\r\nTop=310.00",
+          "MetaFields": {
+            "Count": 7,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "user_id",
+                "Memo": "用户名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "sku_id",
+                "Memo": "skuid",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "spu_id",
+                "Memo": "商品id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "is_cancel",
+                "Memo": "是否已取消 0 正常 1 已取消",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 1
+              },
+              {
+                "ID": 6,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "cancel_time",
+                "Memo": "修改时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "order_detail",
+          "Memo": "订单明细表",
+          "OrderNo": 17,
+          "GraphDesc": "Left=2192.50\r\nTop=160.00",
+          "MetaFields": {
+            "Count": 10,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "order_id",
+                "Memo": "订单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "sku_id",
+                "Memo": "sku_id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "sku_name",
+                "Memo": "sku名称（冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 5,
+                "Name": "img_url",
+                "Memo": "图片名称（冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 6,
+                "Name": "order_price",
+                "Memo": "购买价格(下单时sku价格）",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 10,
+                "DataScale": 2
+              },
+              {
+                "ID": 7,
+                "Name": "sku_num",
+                "Memo": "购买个数",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 8,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "source_type",
+                "Memo": "来源类型",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 10,
+                "Name": "source_id",
+                "Memo": "来源编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "order_info",
+          "Memo": "订单表 订单表",
+          "OrderNo": 18,
+          "GraphDesc": "Left=977.50\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 20,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "consignee",
+                "Memo": "收货人",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 3,
+                "Name": "consignee_tel",
+                "Memo": "收件人电话",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 4,
+                "Name": "final_total_amount",
+                "Memo": "总金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 5,
+                "Name": "order_status",
+                "Memo": "订单状态",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 6,
+                "Name": "user_id",
+                "Memo": "用户id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "delivery_address",
+                "Memo": "送货地址",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 1000
+              },
+              {
+                "ID": 8,
+                "Name": "order_comment",
+                "Memo": "订单备注",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 9,
+                "Name": "out_trade_no",
+                "Memo": "订单交易编号（第三方支付用)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 50
+              },
+              {
+                "ID": 10,
+                "Name": "trade_body",
+                "Memo": "订单描述(第三方支付用)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 11,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 11,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 12,
+                "Name": "operate_time",
+                "Memo": "操作时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 12,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "expire_time",
+                "Memo": "失效时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 13,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 14,
+                "Name": "tracking_no",
+                "Memo": "物流单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 14,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 15,
+                "Name": "parent_order_id",
+                "Memo": "父订单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 15,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 16,
+                "Name": "img_url",
+                "Memo": "图片路径",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 16,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 17,
+                "Name": "province_id",
+                "Memo": "地区",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 17,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 18,
+                "Name": "benefit_reduce_amount",
+                "Memo": "优惠金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 18,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 19,
+                "Name": "original_total_amount",
+                "Memo": "原价金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 19,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 20,
+                "Name": "feight_fee",
+                "Memo": "运费",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 20,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              }
+            ]
+          }
+        },
+        {
+          "Name": "order_refund_info",
+          "Memo": "退单表",
+          "OrderNo": 19,
+          "GraphDesc": "Left=10.00\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 10,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "user_id",
+                "Memo": "用户id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "order_id",
+                "Memo": "订单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "sku_id",
+                "Memo": "skuid",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "refund_type",
+                "Memo": "退款类型",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 6,
+                "Name": "refund_num",
+                "Memo": "退货件数",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 7,
+                "Name": "refund_amount",
+                "Memo": "退款金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 8,
+                "Name": "refund_reason_type",
+                "Memo": "原因类型",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 9,
+                "Name": "refund_reason_txt",
+                "Memo": "原因内容",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 10,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "order_status_log",
+          "OrderNo": 20,
+          "GraphDesc": "Left=1270.00\r\nTop=210.00",
+          "MetaFields": {
+            "Count": 4,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "order_id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "order_status",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 11
+              },
+              {
+                "ID": 4,
+                "Name": "operate_time",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "payment_info",
+          "Memo": "支付流水表",
+          "OrderNo": 21,
+          "GraphDesc": "Left=1472.50\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 9,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "out_trade_no",
+                "Memo": "对外业务编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 3,
+                "Name": "order_id",
+                "Memo": "订单编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 4,
+                "Name": "user_id",
+                "Memo": "用户编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "alipay_trade_no",
+                "Memo": "支付宝交易流水编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 100
+              },
+              {
+                "ID": 6,
+                "Name": "total_amount",
+                "Memo": "支付金额",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 16,
+                "DataScale": 2
+              },
+              {
+                "ID": 7,
+                "Name": "subject",
+                "Memo": "交易内容",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 8,
+                "Name": "payment_type",
+                "Memo": "支付方式",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 20
+              },
+              {
+                "ID": 9,
+                "Name": "payment_time",
+                "Memo": "支付时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "sku_info",
+          "Memo": "库存单元表",
+          "OrderNo": 22,
+          "GraphDesc": "Left=1945.00\r\nTop=160.00",
+          "MetaFields": {
+            "Count": 10,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "skuid(itemID)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "spu_id",
+                "Memo": "spuid",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 3,
+                "Name": "price",
+                "Memo": "价格",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 2,
+                "Nullable": true,
+                "DataLength": 10
+              },
+              {
+                "ID": 4,
+                "Name": "sku_name",
+                "Memo": "sku名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 5,
+                "Name": "sku_desc",
+                "Memo": "商品规格描述",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 2000
+              },
+              {
+                "ID": 6,
+                "Name": "weight",
+                "Memo": "重量",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 3,
+                "Nullable": true,
+                "DataLength": 10,
+                "DataScale": 2
+              },
+              {
+                "ID": 7,
+                "Name": "tm_id",
+                "Memo": "品牌(冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 8,
+                "Name": "category3_id",
+                "Memo": "三级分类id（冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 9,
+                "Name": "sku_default_img",
+                "Memo": "默认显示图片(冗余)",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 10,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "spu_info",
+          "Memo": "商品表",
+          "OrderNo": 23,
+          "GraphDesc": "Left=2192.50\r\nTop=10.00",
+          "MetaFields": {
+            "Count": 5,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "商品id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "spu_name",
+                "Memo": "商品名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 3,
+                "Name": "description",
+                "Memo": "商品描述(后台简述）",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 1000
+              },
+              {
+                "ID": 4,
+                "Name": "category3_id",
+                "Memo": "三级分类id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 2,
+                "Nullable": true
+              },
+              {
+                "ID": 5,
+                "Name": "tm_id",
+                "Memo": "品牌id",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 2,
+                "Nullable": true
+              }
+            ]
+          }
+        },
+        {
+          "Name": "user_info",
+          "Memo": "用户表",
+          "OrderNo": 24,
+          "GraphDesc": "Left=1720.00\r\nTop=260.00",
+          "MetaFields": {
+            "Count": 13,
+            "items": [
+              {
+                "ID": 1,
+                "Name": "id",
+                "Memo": "编号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 1,
+                "DataType": 2,
+                "KeyFieldType": 1,
+                "DefaultValue": "{auto_increment}"
+              },
+              {
+                "ID": 2,
+                "Name": "login_name",
+                "Memo": "用户名称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 2,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 3,
+                "Name": "nick_name",
+                "Memo": "用户昵称",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 3,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 4,
+                "Name": "passwd",
+                "Memo": "用户密码",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 4,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 5,
+                "Name": "name",
+                "Memo": "用户姓名",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 5,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 6,
+                "Name": "phone_num",
+                "Memo": "手机号",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 6,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 7,
+                "Name": "email",
+                "Memo": "邮箱",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 7,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 8,
+                "Name": "head_img",
+                "Memo": "头像",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 8,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 9,
+                "Name": "user_level",
+                "Memo": "用户级别",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 9,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 200
+              },
+              {
+                "ID": 10,
+                "Name": "birthday",
+                "Memo": "用户生日",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 10,
+                "DataType": 4,
+                "DataTypeName": "date",
+                "Nullable": true
+              },
+              {
+                "ID": 11,
+                "Name": "gender",
+                "Memo": "性别 M男,F女",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 11,
+                "DataType": 1,
+                "Nullable": true,
+                "DataLength": 1
+              },
+              {
+                "ID": 12,
+                "Name": "create_time",
+                "Memo": "创建时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 12,
+                "DataType": 4,
+                "Nullable": true
+              },
+              {
+                "ID": 13,
+                "Name": "operate_time",
+                "Memo": "修改时间",
+                "CreateDate": "3-5-21 21:47:09",
+                "OrderNo": 13,
+                "DataType": 4,
+                "Nullable": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }]
+}

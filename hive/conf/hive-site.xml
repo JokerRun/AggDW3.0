@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://node1.hdp:3306/metastore?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=GMT%2B8</value>
+<!--        <value>jdbc:mysql://node1.hdp:3306/metastore?useSSL=false</value>-->
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>root</value>
+    </property>
+
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>000000</value>
+    </property>
+
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+    </property>
+
+    <property>
+        <name>hive.metastore.schema.verification</name>
+        <value>false</value>
+    </property>
+
+    <!-- 使用元数据服务的方式访问 Hive: 指定存储元数据要连接的地址     -->
+
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://node1.hdp:9083</value>
+    </property>
+    <!-- 使用 JDBC 方式访问 Hive:
+        指定 hiveserver2 连接的 host,port -->
+    <property>
+        <name>hive.server2.thrift.bind.host</name>
+        <value>node1.hdp</value>
+    </property>
+    <property>
+        <name>hive.server2.thrift.port</name>
+        <value>10000</value>
+    </property>
+
+    <property>
+        <name>hive.metastore.event.db.notification.api.auth</name>
+        <value>false</value>
+    </property>
+
+    <property>
+        <name>hive.cli.print.header</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>hive.cli.print.current.db</name>
+        <value>true</value>
+    </property>
+
+
+    <!--Spark依赖位置（注意：端口号8020必须和namenode的端口号一致）-->
+    <property>
+        <name>spark.yarn.jars</name>
+        <value>hdfs://node1.hdp:8020/spark-jars/*</value>
+    </property>
+
+    <!--Hive执行引擎-->
+    <property>
+        <name>hive.execution.engine</name>
+        <value>spark</value>
+    </property>
+
+    <!--Hive和Spark连接超时时间-->
+    <property>
+        <name>hive.spark.client.connect.timeout</name>
+        <value>10000ms</value>
+    </property>
+
+</configuration>
